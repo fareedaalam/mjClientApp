@@ -57,10 +57,10 @@
         </form>
     </div>
 
-</nav>
+</nav> -->
 
 
- -->
+
 
 
 
@@ -68,14 +68,14 @@
 
 
 <nav class="navbar navbar-expand-lg bg-white">
-    <div class="container-fluid">
+    <div class="mobcss container-fluid px-5">
         <a class="navbar-brand" href="index.html"><img src="../../assets/logo.png" alt="" class="img-fluid logo-img"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+        </button> -->
+        <div class="collapse navbar-collapse mobnav" id="navbarNavDropdown">
+            <ul class="navbar-nav navshowrow">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/contestant">Contestant</a>
                 </li>
@@ -88,6 +88,20 @@
             </ul>
         </div>
 
+
         
+        <div class="dropdown loglogin" *ngIf="(accountService.currentUser$ |async) as user" dropdown>            
+            <img src="{{user.photoUrl || './assets/user.png'}}" alt="{{user.username}}">
+            <a class="dropdown-toggle  ms-2 text-decoration-none" dropdownToggle> Welocome {{ user.username || user.knownAs | titlecase}}</a>
+            <div class="dropdown-menu mt-3 coolmenu" *dropdownMenu>
+                <a class="dropdown-item" routerLink="/member/edit">Edit Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" (click)="logout()">Logout</a>
+            </div>
+        </div>
     </div>
+
+
+  
+
 </nav>

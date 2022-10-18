@@ -24,8 +24,8 @@ a {
 }
 
 .navbar-brand {
-    margin-left: 40px;
-    margin-right: 0;
+    margin-bottom: 10px;
+
 }
 
 .collapse {
@@ -152,8 +152,8 @@ a {
 
 @media(max-width: 991px){
     .collapse {
-        margin-left: 3%;
-        justify-content: flex-start;
+      
+        justify-content: center;
     }
 }
 @media(max-width: 548px) {
@@ -164,3 +164,43 @@ a {
         padding: 2rem;
     }
 }
+
+
+
+
+.loglogin{
+    display: flex;
+    align-items: center;
+  
+}
+
+
+.loglogin a{
+    color: #1175ba;
+    font-weight: bold;
+    align-self: center;
+    padding: 8px;
+}
+
+
+.loglogin img{
+    height: 50px;
+    width: 50px;
+}
+
+.coolmenu{
+    inset: 100% auto auto 0px;
+    
+    transform: translateX(55px) !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .mobcss {
+        justify-content: center !important;
+    }
+    .navshowrow{
+        flex-direction: row !important;
+    }
+  }
+  
