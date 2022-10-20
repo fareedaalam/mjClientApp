@@ -45,10 +45,7 @@ export class AccountService {
       })
       ,
       catchError((error) => {
-        console.log('error caught in service')
-        // console.error(error.error);
-        //  this.toastr.error(error.error);
-
+        console.log('error caught in service');        
         return throwError(() => new Error(error));
       })
     );
