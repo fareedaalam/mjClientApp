@@ -5,7 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ReplaySubject, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators'
 import { environment } from 'src/environments/environment';
-import { OTP, User } from '../_models/user';
+import { OTP, User,UpdatePwdDto } from '../_models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -45,10 +45,7 @@ export class AccountService {
       })
       ,
       catchError((error) => {
-        console.log('error caught in service')
-        // console.error(error.error);
-        //  this.toastr.error(error.error);
-
+        console.log('error caught in service');        
         return throwError(() => new Error(error));
       })
     );
@@ -97,7 +94,11 @@ export class AccountService {
   }
 
   VerifyForgotPwd(model: OTP) {
-    return this.http.post(this.baseUrl + 'otp/forgot-pwd', model);
+    return this.http.post<any>(this.baseUrl + 'account/forgot-pwd', model);
+  }
+
+  UpdatePassword(model:UpdatePwdDto){
+    return this.http.post(this.baseUrl + 'account/update-pwd', model)
   }
 
 }
