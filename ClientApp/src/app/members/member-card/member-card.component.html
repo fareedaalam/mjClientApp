@@ -1,6 +1,6 @@
 <div class="card mb-4">
-    <div class="card-img-wrapper">
-        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top">
+    <div class="card-img-wrapper" style="padding: 10px;">
+        <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}" class="card-img-top" style="border-radius:5px;">
         <ul class="list-inline member-icons animate text-center">
             <li class="list-inline-item"><button routerLink="/members/{{member.username}}" class="btn btn-primary" style="background-color:#ec268f ;">
                     <i class="fa fa-user"></i></button>
