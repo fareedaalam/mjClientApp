@@ -28,8 +28,6 @@ export class ContestantComponent implements OnInit {
     this.memberServices.getContestant().subscribe(response => {
       this.members = response;
      // console.log(response);
-    },error=>{
-      console.log(error);
     })
   }
 

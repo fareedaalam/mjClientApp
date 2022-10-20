@@ -7,7 +7,6 @@ import { ServerErrorComponent } from './errors/server-error/server-error.compone
 import { TestErrosComponent } from './errors/test-erros/test-erros.component';
 import { HomeComponent } from './home/home.component';
 import { ListsComponent } from './lists/lists.component';
-import { LoginComponent } from './login/login.component';
 import { ContestantComponent } from './members/contestant/contestant.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
       { path: 'admin', component: AdminPanelComponent, canActivate: [AdminGuard] }
     ]
   },
-  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'forgotpassword', component: ForgotPasswordComponent },
   { path: 'contestant', component: ContestantComponent },
