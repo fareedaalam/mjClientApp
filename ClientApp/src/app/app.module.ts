@@ -14,7 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
-import { ListsComponent } from './lists/lists.component';
+import { ListsComponent } from './members/lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SharedModule } from './_modules/shared.module';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
@@ -37,6 +37,8 @@ import { RolesModalComponent } from './modals/roles-modal/roles-modal.component'
 import { ConfirmDialogComponent } from './modals/confirm-dialog/confirm-dialog.component';
 import { ContestantComponent } from './members/contestant/contestant.component';
 import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password.component';
+import { LoginComponent } from './login/login.component';
+import { UpdateUserComponent } from './admin/update-user/update-user.component';
 
 
 
@@ -66,7 +68,9 @@ import { ForgotPasswordComponent } from './admin/forgot-password/forgot-password
     RolesModalComponent,
     ConfirmDialogComponent,
     ContestantComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    LoginComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

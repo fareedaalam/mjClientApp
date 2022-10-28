@@ -83,7 +83,7 @@
 
 <div class="container-fluid">
     <div class="row signup-row">
-        <form class="signup-form">
+        <div class="signup-form">
                 <h1 class="text-center signup-heading">Create Account</h1>
                 
                 <img class="mt-5" src="../../assets/alert.png" alt="">
@@ -91,7 +91,6 @@
                 <p class="mt-3">Enter your mobile number to create account.</p>
 
                 <p>We'll send you one time password(OTP).</p>
-
 
                 <form *ngIf="!showOtp" [formGroup]="otpForm" (ngSubmit)="otpForm.valid && sendOtp()" autocomplete="off">
                     <app-text-input [formControl]='otpForm.controls["phonenumber"]' [label]='"Mobile"'>
@@ -104,6 +103,7 @@
                             type="submit" >      Submit          
                            <!-- <span> {{txtOtp ? 'Send Again' : 'Submit'}} </span> -->
                         </button>
+                        <button class="btn btn-sm btn-info form-control mt-2" (click)="cancle()">Cancel</button>
                     </div>
                     <!-- <p>{{this.otpForm.valid}}</p> -->
                 </form>
@@ -162,10 +162,8 @@
                         <button class="btn btn-sm btn-info form-control mt-2" (click)="cancle()">Cancel</button>
                     </div>
             
-                </form>
-                
+                </form>               
 
-            </form>
-        
+            </div>        
     </div>
 </div>

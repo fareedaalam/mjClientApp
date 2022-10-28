@@ -27,7 +27,9 @@ export class ContestantComponent implements OnInit {
     //this.memberServices.setUserParams(this.userParams);
     this.memberServices.getContestant().subscribe(response => {
       this.members = response;
-     // console.log(response);
+    // console.log(response);
+    },error=>{
+      console.log(error);
     })
   }
 
