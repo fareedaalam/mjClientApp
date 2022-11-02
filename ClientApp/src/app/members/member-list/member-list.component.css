@@ -153,4 +153,22 @@ a{
     .login-row{
         padding: 2rem;
     }
+    .di-cent{
+        justify-content: flex-end;
+    }
+}
+
+
+
+.di-cent
+{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-text
+{
+    color: #fff;
+    font-weight: 600;
+    padding-top: 4px;
 }

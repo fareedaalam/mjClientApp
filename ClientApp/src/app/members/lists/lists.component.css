@@ -48,7 +48,7 @@ a{
 /* contestant page  */
 
 .login-container{
-    padding: 1rem 5rem;
+    padding: 1rem 7rem;
     text-align: center;
 }
 .upper-row{
@@ -132,4 +132,31 @@ a{
     .login-row{
         padding: 2rem;
     }
+    .top-list{
+        margin:0px 30px !important;
+        display: grid;
+        justify-content: center;
+    }
 }
+
+
+.top-list{
+    margin:0px 100px;
+}
+
+.cstm-btn{
+    background-color: #ec268f;
+    border: none !important;
+    border-radius: 3px !important;
+    padding: 0.3rem 1rem !important;
+    margin: 0 1rem;
+}
+
+.cstm-btn:hover{
+    background-color: #ff60b5 !important;
+}
+
+.page-item a{
+    background-color: #ec268f !important;   
+}
+
